@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Computed Properties</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<div class="main">
+		<div class="vm">
+			<button v-on:click="primero++">Incrementar el primero
+			<p>Primero : {{ primero }}</p>
+			</button>
+			<button v-on:click="segundo++">Incrementar el segundo
+			<p>Segundo : {{ segundo }}</p>
+			</button>
+			<button v-on:click="tercero++">Incrementar el tercero
+			<p>Tercero : {{ tercero }}</p>
+			</button>
+			<button v-on:click="cuarto++">Incrementar el cuarto
+			<p>Cuarto  : {{ cuarto }}</p>
+			</button>
+	<!-- ahora como hacemos las sumas ? lo haremos esta vez con computed data -->
+			<h1>S  U  M  A  : {{ total }}</h1>
+		</div>
+		<script src="vue.js"></script>
+	</div>
+</body>
+</html>

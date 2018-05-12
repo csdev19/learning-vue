@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> Etiqueta template  </title>
+	<link rel="stylesheet" href="">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+	<div class="main">
+		<!-- si quieres que no salga la etiqueta div puedes cambiarla 
+		por una etiqueta html llamada template -->
+		<template v-if = 'show'> ESTE es mi primer template
+			<p>Esto lo veras si dices la verdad</p>
+ 		</template>
+ 		<div v-else> ESTE es mi segundo div
+			<p>Esto si mientes e.e</p>
+ 		</div>
+		<script src = "vue.js"></script>
+	</div>
+</body>
+</html>

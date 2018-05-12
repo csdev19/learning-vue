@@ -1,0 +1,28 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background: #042a2b;
+}
+
+.main{
+	background: #d84727;
+	width: 80%;
+	margin-top: 20%;
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+.vm{
+	height: 100%;
+}
+
+
+.vm>h1{
+	display: inline-block; 
+	color: #fff;
+	align-content: center;
+	margin-left: 40%;
+}
