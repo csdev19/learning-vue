@@ -1,0 +1,15 @@
+.vue {
+	width: 70%;
+	margin: auto;
+	background-color: lightgray;
+	text-align: center;
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+}
+
+.canvas {
+	background-color: lightblue;	
+}

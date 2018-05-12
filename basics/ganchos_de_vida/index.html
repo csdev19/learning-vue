@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Ganchos de Vida</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+	<div class="vm">
+		<h3> {{ mensaje }}</h3>
+		<button v-on:click="mensaje = 'THIS IS THE NEW MSJ'">Cambiar mensaje</button>
+		<button v-on:click="destruir">Destruir instancia</button>
+	</div>
+	<script src="vue.js"></script>	
+</body>
+</html>
+

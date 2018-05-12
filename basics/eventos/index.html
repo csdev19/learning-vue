@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EVENTOS</title>
+	<link rel="stylesheet" href="base.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+	<div class="vue">
+		<!-- Evenetos que podemos manejar en VUE -->
+		<!-- Los eventos son cosas que pasan en el HTML lo que permita la REACTIVIDAD -->
+		<!-- Un evento puede llamar a una variable tanto como a un method -->
+		<div class="container">
+			<h2>Eventos en VUE</h2>
+			<button v-on:click="contador++">Sumar uno</button>
+			<button v-on:click="restar">Restar uno</button>
+			<h3>{{ contador }}</h3>
+			<hr>
+		</div>
+
+		<!-- Pasar argumentos -->
+		<div class="container">
+			<h2>Pasar argumentos a eventos </h2>
+			<input type="text" v-model:name="mesage" placeholder="Inserta la alerta">
+			<button v-on:click="alerta(mesage)">Mostrar alerta</button>
+			<hr>
+		</div>		
+		
+		<!-- Usar un objeto EVENT -->
+		<!-- Nos permite ver la informacion del evento que esta siendo ejecutado -->
+		<!-- VUE por defecto nos envia por parametro el evento que le estamos enviando -->
+		<div class="container">
+			<h2>Usar objeto EVENT </h2>
+			<div class="canvas" style="height: 300px "
+				v-on:mouseMove="showTarget"></div>
+				x: {{ x }}, y: {{ y }}
+			<hr>
+		</div>
+
+		<!-- Usar mas de un evento -->
+		<div class="container">
+			<h2>Usar mas de un evento</h2>
+			<div class="canvas" style="height: 300px "
+			v-on:mouseMove="showTarget"
+			v-on:click="sumar"></div>
+			<h3>x: {{ x }}, y: {{ y }}</h3>
+			<h3>{{ moreThan1 }}</h3>
+			<hr>
+		</div>
+
+		<!-- Modificadores de Eventos -->
+		<div class="container">
+			<h2>Modificadores de Eventos</h2>
+			<!-- como el evento click un modificador seria once  
+			Para detener toda accion de un evento podemos usar stop-->
+			<div class="canvas" style="height: 300px "
+			v-on:mouseMove="showTarget"
+			v-on:click.once="sumar"></div>
+			<h3>x: {{ x }}, y: {{ y }}</h3>
+			<h3>{{ moreThan1 }}</h3>
+			<hr>
+		</div>
+
+		<!-- Eventos del teclado -->
+		<div class="container">
+			<h2>Eventos del teclado</h2>
+			<input type="text" v-on:keyup.z="sumar" name="" placeholder="">
+			<h3>{{ moreThan1 }}</h3>
+			
+			<hr/>
+		</div>
+
+		<!-- Forma alternativa de V-ON -->
+		<div class="container">
+			<h2>Forma alternativa de V-ON</h2>
+			<p>Se puede reemplazar el v-on con --> @ </p>
+			<button type="submit" @click="alerta('Work it')">Test del @</button>
+			<hr/>
+		</div>
+
+		<pre>
+			{{ $data|json }}
+		</pre>
+	</div>
+	<script src="vue.js"></script>
+</body>
+</html>
